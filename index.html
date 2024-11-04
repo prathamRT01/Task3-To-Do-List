@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1 id="heading">To-Do List</h1>
+    <div class="outerdiv">
+        <div class="adddiv">
+        <button id="openModalBtn" class="btn" title="Add Task" type="button">+</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h1 id="modelHeading">Add Task Details</h1>
+              
+              <div class="content">  
+            </div>
+                      <form>
+
+                      <div class="inputcontent">
+                          <label style="margin-bottom: 2px; color: black; font-weight: bold; font-size: x-large;" for="title" >Title :</label>
+                          <input style="margin-bottom: 3px; color: black;" type="text" id="title" required>
+                          <!-- <label style="margin-bottom: 3px; color: black; font-weight: bold; font-size: x-large;" for="desc">Description :</label>
+                          <textarea style="margin-bottom: 3px;" name="desc" id="desc"></textarea> -->
+                          <label style="margin-bottom: 3px; color: black; font-weight: bold; font-size: x-large;" for="date">Date :</label>
+                          <input type="date" name="date" id="date" required >
+                          <div id="datemessage" class=" msg"></div>
+                        </div>
+                        <button onclick="taskAdder()" style=" font-size: larger; font-weight: bold; color: white; margin-top: 0.8rem; margin-left: 14rem; height: 3rem; width:8rem; border: none; border-radius: 1rem; background-color: orange; cursor: pointer;  " onmouseover="this.style.backgroundColor = 'grey' "
+                        onmouseout = " this.style.backgroundColor= 'orange'  " id="startBtn">Add Task</button>
+                    </form>
+                        
+              </div>
+            </div>
+        </div>
+        <p id="errorMessage" class="error-message"></p>
+        <table id="itemTable">
+            <thead>
+                <tr>
+                    <th>Task</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="taskTableBody">
+
+                <!-- Tasks will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
